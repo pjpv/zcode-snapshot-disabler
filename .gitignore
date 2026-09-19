@@ -1,0 +1,9 @@
+# runtime artifacts (never publish these)
+patch-state.json
+patch_asar.log
+*.marker
+*.childlog
+appimage/
+
+__pycache__/
+*.pyc
