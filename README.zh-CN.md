@@ -81,6 +81,17 @@ python3 restore_asar.py           # 全部还原
 完成后**重启 ZCode** —— 运行中的进程仍持有旧代码,重启后才生效。
 Windows 上若 `python` 是 2.x,脚本会自动经 `py -3` 重启自身。
 
+### AI 一句话执行
+
+直接让 AI 编程助手代办?把这句粘给它:
+
+```text
+帮我禁用本机 ZCode 的代码快照上传:克隆 https://github.com/pjpv/zcode-snapshot-disabler,
+用 Python 3 运行其中的 patch_asar.py(先 --scan 查看,再执行 patch,弹出 UAC/sudo/
+osascript 提权提示时请放行),完成后再次 --scan 验证 patched=1,报告检测到的应用
+版本,并提醒我重启 ZCode 生效;若以后要还原,运行同目录的 restore_asar.py。
+```
+
 ## 平台与安装方式覆盖
 
 | 平台 / 安装方式              | 探测位置                                                | 提权方式        |
