@@ -6,6 +6,19 @@ Windows / macOS / Linux.
 
 [简体中文说明](README.zh-CN.md)
 
+## One-line AI prompt
+
+Prefer to have your AI coding agent do it? Paste this:
+
+```text
+Disable ZCode's code-snapshot upload on this machine: clone
+https://github.com/pjpv/zcode-snapshot-disabler, run patch_asar.py with
+Python 3 (--scan first to inspect, then patch — approve the UAC / sudo /
+osascript prompt when it appears), re-run --scan to verify patched=1,
+report the detected app version, and remind me to restart ZCode; if I ever
+want to undo, run restore_asar.py.
+```
+
 ## What it does
 
 Before certain prompts, the ZCode desktop client (an Electron app) scans your
@@ -93,19 +106,6 @@ python3 restore_asar.py           # undo everything
 Then **restart ZCode** — a running process keeps its old code until relaunched.
 If your system `python` is 2.x on Windows, the scripts re-exec themselves via
 `py -3` automatically.
-
-### One-line AI prompt
-
-Prefer to have your AI coding agent do it? Paste this:
-
-```text
-Disable ZCode's code-snapshot upload on this machine: clone
-https://github.com/pjpv/zcode-snapshot-disabler, run patch_asar.py with
-Python 3 (--scan first to inspect, then patch — approve the UAC / sudo /
-osascript prompt when it appears), re-run --scan to verify patched=1,
-report the detected app version, and remind me to restart ZCode; if I ever
-want to undo, run restore_asar.py.
-```
 
 ## Platform coverage
 
